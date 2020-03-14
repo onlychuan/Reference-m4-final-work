@@ -9,27 +9,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    var data = Data
+    var cat: Cat
     var body: some View {
         VStack(alignment: .leading) {
-            Image(data[2].img)
+            Image(cat.img)
                 
-            Text(data[2].name)
+            Text(cat.name)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
             
-            Text("A LIITEL GIRL")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(Color.gray)
                 
             HStack {
                 Text("Breed:")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                Text(data[2].breed)
+                Text(cat.breed)
                  .font(.largeTitle)
             }
             HStack {
@@ -37,7 +33,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                Text(data[2].color)
+                Text(cat.color)
                  .font(.largeTitle)
             }
             HStack {
@@ -46,7 +42,7 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .padding(.horizontal, 11.0)
                 
-                Text(data[2].size)
+                Text(cat.size)
                  .font(.largeTitle)
                 
             }
@@ -58,6 +54,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(cat: Data[2])
     }
 }

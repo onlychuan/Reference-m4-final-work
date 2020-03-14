@@ -11,10 +11,18 @@ import SwiftUI
 struct CatList: View {
     var body: some View {
         NavigationView{
-        List(Data) { cat in
-            CatRowView(cat: cat)
+            List(Data) { cat in
+                NavigationLink(destination: ContentView(cat: cat)){
+                    CatRowView(cat: cat)
+                }
             }
-        }.navigationBarTitle(Text("good"))
+             .navigationBarTitle(Text("Cats"))
+        }
+        
+       
+        
+       
+    
     }
 }
 
