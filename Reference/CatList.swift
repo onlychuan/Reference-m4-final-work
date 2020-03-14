@@ -13,9 +13,6 @@ struct CatList: View {
         List(Data) { cat in
             CatRowView(cat: cat)
         }
-
-//
-//        }
     }
 }
 
