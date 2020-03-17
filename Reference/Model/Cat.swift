@@ -17,7 +17,9 @@ struct Cat: Identifiable{
     var size: String
 }
 let Data = [
-    Cat(id: 002, img:"cat1", name:"litte A", breed:"Devon Rex", color:"black", size:"Small"),
-    Cat(id: 003, img:"cat2", name:"john", breed:"Sphynx", color:"white", size:"Small"),
-    Cat(id: 001, img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large")
+    Cat(id: 002, img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small"),
+    Cat(id: 003, img:"cat2", name:"John", breed:"Sphynx", color:"White", size:"Small"),
+    Cat(id: 001, img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large"),
+//     Cat(id: 004, img:"cat3", name:"Allen", breed:"Main", color:"PPPP", size:"Large")
+    
 ]
