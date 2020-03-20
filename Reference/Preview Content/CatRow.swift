@@ -15,14 +15,11 @@ struct CatRowView: View {
             Image(cat.img)
                 .resizable()
                 .frame(width: 50, height:50)
-            
             Text(cat.name)
             Spacer()
         }
-            
         }
     }
-
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {

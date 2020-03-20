@@ -18,14 +18,8 @@ struct CatList: View {
             }
              .navigationBarTitle(Text("Cats"))
         }
-        
-       
-        
-       
-    
     }
 }
-
 struct CatList_Previews: PreviewProvider {
     static var previews: some View {
         CatList()

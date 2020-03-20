@@ -21,8 +21,8 @@ class CatTest: XCTestCase{
         XCTAssertTrue(Data[2].name == "Lily");
     }
     func testcatbreed(){
-        XCTAssertTrue(Data[0].breed == "");
-          XCTAssertTrue(Data[1].breed == "John");
-          XCTAssertTrue(Data[2].breed == "Lily");
+        XCTAssertTrue(Data[0].breed == "Devon Rex");
+          XCTAssertTrue(Data[1].breed == "Sphynx");
+          XCTAssertTrue(Data[2].breed == "English short hair");
       }
 }
