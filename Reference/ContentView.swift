@@ -10,15 +10,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var note: String = ""
     var cat: Cat
+    @ObservedObject var model: Cat
+
     var body: some View {
         VStack(alignment: .leading) {
-            VStack{
-                TextField("",text:$note)
+            VStack(alignment: .leading){
+                Text("Note:")
+                    .font(.headline)
+                TextField("",text:$model.note)
+                    .padding(.horizontal)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-            }.padding()
-          
+                    
+            }
             Image(cat.img)
             Text(cat.name)
                 .font(.largeTitle)
@@ -59,6 +63,6 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(cat: Data[2])
+        ContentView( cat: Data[0], model:Data[0])
     }
 }
