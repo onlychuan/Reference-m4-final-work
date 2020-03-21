@@ -12,11 +12,12 @@ struct CatList: View {
     var body: some View {
         NavigationView{
             List(Data) { cat in
-                NavigationLink(destination: ContentView(cat: cat)){
+                NavigationLink(destination: ContentView(cat: cat,  model: cat)){
                     CatRowView(cat: cat)
                 }
             }
-             .navigationBarTitle(Text("Cats"))
+            .navigationBarTitle(Text("Cats"))
+        
         }
     }
 }
