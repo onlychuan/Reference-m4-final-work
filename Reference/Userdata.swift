@@ -1,5 +1,5 @@
 //
-//  Userdata.swift
+//  UserData.swift
 //  Reference
 //
 //  Created by Allen gu on 20/3/20.
@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
-class noteView: ObservableObject {
-    private static let usertext 
+final class UserData: ObservableObject {
+    @Published var shownote = ""
+    @Published var cats = Data
 }

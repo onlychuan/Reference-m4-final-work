@@ -30,7 +30,7 @@ class Cat: ObservableObject, Identifiable{
 
 //cat data detail
 let Data = [
-    Cat(id:001, img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
+    Cat(id: 001, img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
     Cat(id: 003, img:"cat2", name:"John", breed:"Sphynx", color:"White", size:"Small",note:""),
     Cat(id: 002, img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large",note:""),
 ]

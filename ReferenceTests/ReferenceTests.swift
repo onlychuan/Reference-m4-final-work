@@ -25,4 +25,16 @@ class CatTest: XCTestCase{
           XCTAssertTrue(Data[1].breed == "Sphynx");
           XCTAssertTrue(Data[2].breed == "English short hair");
       }
+    func testcatcolor(){
+        XCTAssertTrue(Data[0].color == "Black");
+        XCTAssertTrue(Data[1].color == "White");
+        XCTAssertTrue(Data[2].color == "Tabby");
+    }
+    func testcatimg(){
+      XCTAssertTrue(Data[1].img == "cat2");
+        XCTAssertTrue(Data[2].img == "cat");
+        XCTAssertTrue(Data[0].img == "cat1");
+    }
+
+    
 }
