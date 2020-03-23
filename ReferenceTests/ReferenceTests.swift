@@ -35,6 +35,11 @@ class CatTest: XCTestCase{
         XCTAssertTrue(Data[2].img == "cat");
         XCTAssertTrue(Data[0].img == "cat1");
     }
+    func testtextfield(){
+        XCTAssertTrue(Data[1].note == "");
+        XCTAssertTrue(Data[2].note == "");
+        XCTAssertTrue(Data[0].note == "");
+    }
 
     
 }
