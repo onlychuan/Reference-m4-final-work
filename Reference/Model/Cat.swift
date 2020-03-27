@@ -10,15 +10,14 @@ import Foundation
 
 //defind for cat breed, model base class
 class Cat: ObservableObject, Identifiable{
-    var id:Int
-    var img:String
-    var name:String
-    var breed:String
-    var color:String
-    var size: String
-    @Published var note:String
-    init(id:Int,img:String,name:String,breed:String,color:String,size:String,note:String) {
-        self.id = id
+     @Published var id = UUID()
+     @Published var img:String
+     @Published var name:String
+     @Published var breed:String
+     @Published var color:String
+     @Published var size: String
+     @Published var note:String
+    init(img:String,name:String,breed:String,color:String,size:String,note:String) {
         self.img = img
         self.name = name
         self.breed = breed
@@ -30,7 +29,9 @@ class Cat: ObservableObject, Identifiable{
 
 //cat data detail
 let Data = [
-    Cat(id: 001, img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
-    Cat(id: 003, img:"cat2", name:"John", breed:"Sphynx", color:"White", size:"Small",note:""),
-    Cat(id: 002, img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large",note:""),
+    Cat(img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
+    Cat(img:"cat2", name:"John", breed:"Sphynx", color:"White", size:"Small",note:""),
+    Cat(img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large",note:""),
 ]
+
+
