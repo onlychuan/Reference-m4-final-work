@@ -10,38 +10,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    var cat: Cat
-    @ObservedObject var model: Cat
+    @ObservedObject var cat: Cat
+     
 
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading){
                 Text("Note:")
                     .font(.headline)
-                TextField("",text:$model.note)
+                TextField("",text:$cat.note)
                     .padding(.horizontal)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
             }
             Image(cat.img)
-            Text(cat.name)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
+            TextField("name",text:$cat.name)
+                
             HStack {
                 Text("Breed:")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                Text(cat.breed)
-                 .font(.largeTitle)
+                TextField("",text:$cat.breed)
+                 
             }
             HStack {
                 Text("Color:")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                Text(cat.color)
+                TextField("",text:$cat.color)
                  .font(.largeTitle)
             }
             HStack {
@@ -49,7 +46,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.horizontal, 11.0)
-                Text(cat.size)
+                TextField("",text:$cat.size)
                  .font(.largeTitle)
                 
 
@@ -63,6 +60,6 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView( cat: Data[0], model:Data[0])
+        ContentView( cat: Data[0])
     }
 }
