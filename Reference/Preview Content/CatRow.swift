@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CatRowView: View {
-    var cat: Cat
+     @ObservedObject var cat: Cat
     var body: some View {
         HStack {
             Image(cat.img)
