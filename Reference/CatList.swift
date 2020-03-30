@@ -11,48 +11,67 @@ import SwiftUI
 struct CatList: View {
     
     
-    @ObservedObject private var view = viewModel()
-    
+    @ObservedObject  private var view = viewModel()
+   
     var body: some View {
        
         NavigationView{
-            
-            List(view.cats)
-            { cat in
-                NavigationLink(destination: ContentView(cat: cat)){
-                    CatRowView(cat: cat)
+            List{
+                ForEach(view.cats){cat in NavigationLink(destination: ContentView(cat: cat)){
+                        CatRowView(cat: cat)
+                    }
+                
+                   
+                    
                 }
-                } 
+                .onDelete(perform: self.view.removelist)
+              
+            }
             .navigationBarTitle(Text("Cats"))
-            .navigationBarItems(
-                           leading: EditButton(),
-                           trailing: Button(
-                            action:{
-                                withAnimation { self.view.add()
-                                    print()
-                                }
-                           }
-                           ) {
-                               Image(systemName: "plus")
-                           }
-                       )
-        }
+                                      .navigationBarItems(
+                                               leading: EditButton(),
+                                               trailing: Button(
+                                                action:{
+                                                    withAnimation { self.view.add()
+                                                        print()
+                                                    }
+                                               }
+                                               ) {
+                                                   Image(systemName: "plus")
+                                               }
+                                           )
+            
+            
+            
+        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+       
+        
+            
     }
 }
 
 
 
-class viewModel: ObservableObject, Identifiable {
-    @Published var cats = [Cat]()
+
+
+class viewModel: ObservableObject, Identifiable{
+   
+    @Published var cats = [Cat](Data)
+    
+    
+    
+    
     func add(){
         let cat = Cat(img:" ", name:"<new cat>", breed:"", color:" ", size:" ", note:"")
         cats.append(cat)
-        print(cats)
     }
+    func removelist(_ indexSet: IndexSet) {
+        
+        self.cats.remove(atOffsets: indexSet)
+      
+        
+     }
 
-    
-//    func remove(_ indices: IndexSet){
-//        indices.forEach(cats.remove(at: $0))}
 }
 
 
@@ -60,6 +79,9 @@ class viewModel: ObservableObject, Identifiable {
 
 struct CatList_Previews: PreviewProvider {
     static var previews: some View {
-        CatList()
+        
+            CatList()
+           
+    
     }
 }

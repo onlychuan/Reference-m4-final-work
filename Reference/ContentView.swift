@@ -24,6 +24,7 @@ struct ContentView: View {
             }
             Image(cat.img)
             TextField("name",text:$cat.name)
+             .font(.largeTitle)
                 
             HStack {
                 Text("Breed:")
@@ -31,6 +32,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
                 TextField("",text:$cat.breed)
+                 .font(.largeTitle)
                  
             }
             HStack {
@@ -60,6 +62,8 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView( cat: Data[0])
+       
+                   ContentView( cat: Data[0])
+        
     }
 }
