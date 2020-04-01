@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 //defind for cat breed, model base class
 class Cat: ObservableObject, Identifiable{
      @Published var id = UUID()
-     @Published var img:String
+    @Published var img = URLimage.imagURL
      @Published var name:String
      @Published var breed:String
      @Published var color:String
@@ -28,10 +29,13 @@ class Cat: ObservableObject, Identifiable{
 }
 
 //cat data detail
-let Data = [
-    Cat(img:"cat1", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
-    Cat(img:"cat2", name:"John", breed:"Sphynx", color:"White", size:"Small",note:""),
-    Cat(img:"cat", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large",note:""),
+let Datacat = [
+    Cat(img:"https://cdn1-www.cattime.com/assets/uploads/gallery/bombay-cats-and-kittens_1/devon-rex-cats-and-kittens-1.jpg", name:"litte A", breed:"Devon Rex", color:"Black", size:"Small",note:""),
+    Cat(img:"https://cf.ltkcdn.net/cats/images/orig/247865-1600x1030-sphynx-cat-rescue-shelters.jpg", name:"John", breed:"Sphynx", color:"White", size:"Small",note:""),
+    Cat(img:"https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png", name:"Lily", breed:"English short hair", color:"Tabby", size:"Large",note:""),
 ]
+
+
+
 
 

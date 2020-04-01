@@ -56,13 +56,13 @@ struct CatList: View {
 
 class viewModel: ObservableObject, Identifiable{
    
-    @Published var cats = [Cat](Data)
+    @Published var cats = [Cat](Datacat)
     
     
     
     
     func add(){
-        let cat = Cat(img:" ", name:"<new cat>", breed:"", color:" ", size:" ", note:"")
+        let cat = Cat(img:"palcaeholder", name:"<new cat>", breed:"", color:" ", size:" ", note:"")
         cats.append(cat)
     }
     func removelist(_ indexSet: IndexSet) {
@@ -81,7 +81,5 @@ struct CatList_Previews: PreviewProvider {
     static var previews: some View {
         
             CatList()
-           
-    
     }
 }

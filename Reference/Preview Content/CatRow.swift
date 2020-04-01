@@ -12,9 +12,9 @@ struct CatRowView: View {
      @ObservedObject var cat: Cat
     var body: some View {
         HStack {
-            Image(cat.img)
-                .resizable()
-                .frame(width: 50, height:50)
+              URLimage(url:cat.img)
+              
+               .frame(width: 50, height:50)
             Text(cat.name)
             Spacer()
         }
@@ -24,8 +24,8 @@ struct CatRowView: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            CatRowView(cat: Data[2])
-            CatRowView(cat: Data[0])
+            CatRowView(cat: Datacat[2])
+            CatRowView(cat: Datacat[0])
         }
         .previewLayout(.fixed(width: 300, height: 70))
         
