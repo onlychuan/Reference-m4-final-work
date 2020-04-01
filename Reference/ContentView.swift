@@ -55,7 +55,7 @@ struct ContentView: View {
                  .font(.largeTitle)
             }
             
-            if cat.img == "palcaeholder"{
+            if cat.img == "https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img.jpg" {
             VStack(alignment: .leading){
                 
                 Text("ImageUrl:")
@@ -89,7 +89,7 @@ struct ContentView_Previews: PreviewProvider {
 struct URLimage: View {
     let url: String
 
-    static var imagURL = "https://pbs.twimg.com/profile_images/823569976342773760/c2RLAG7h_400x400.jpg"
+    static var imagURL = ""
     @ObservedObject private var imageDownloader = ImageDowanloader()
     init(url:String){
         self.url = url

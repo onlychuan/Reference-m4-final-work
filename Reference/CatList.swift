@@ -57,12 +57,13 @@ struct CatList: View {
 class viewModel: ObservableObject, Identifiable{
    
     @Published var cats = [Cat](Datacat)
+    var imageholder :String = "https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img.jpg"
     
     
     
     
     func add(){
-        let cat = Cat(img:"palcaeholder", name:"<new cat>", breed:"", color:" ", size:" ", note:"")
+        let cat = Cat(img:imageholder, name:"<new cat>", breed:"", color:" ", size:" ", note:"")
         cats.append(cat)
     }
     func removelist(_ indexSet: IndexSet) {
