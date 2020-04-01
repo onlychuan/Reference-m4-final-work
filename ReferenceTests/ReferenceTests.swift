@@ -11,35 +11,44 @@ import XCTest
 
 class CatTest: XCTestCase{
     func testlist(){
-        XCTAssertTrue(Data.count == 3)
+        XCTAssertTrue(Datacat.count == 3)
         
     }
     
     func testcatname(){
-        XCTAssertTrue(Data[0].name == "litte A");
-        XCTAssertTrue(Data[1].name == "John");
-        XCTAssertTrue(Data[2].name == "Lily");
+        XCTAssertTrue(Datacat[0].name == "litte A");
+        XCTAssertTrue(Datacat[1].name == "John");
+        XCTAssertTrue(Datacat[2].name == "Lily");
     }
     func testcatbreed(){
-        XCTAssertTrue(Data[0].breed == "Devon Rex");
-          XCTAssertTrue(Data[1].breed == "Sphynx");
-          XCTAssertTrue(Data[2].breed == "English short hair");
+        XCTAssertTrue(Datacat[0].breed == "Devon Rex");
+          XCTAssertTrue(Datacat[1].breed == "Sphynx");
+          XCTAssertTrue(Datacat[2].breed == "English short hair");
       }
     func testcatcolor(){
-        XCTAssertTrue(Data[0].color == "Black");
-        XCTAssertTrue(Data[1].color == "White");
-        XCTAssertTrue(Data[2].color == "Tabby");
+        XCTAssertTrue(Datacat[0].color == "Black");
+        XCTAssertTrue(Datacat[1].color == "White");
+        XCTAssertTrue(Datacat[2].color == "Tabby");
     }
     func testcatimg(){
-      XCTAssertTrue(Data[1].img == "cat2");
-        XCTAssertTrue(Data[2].img == "cat");
-        XCTAssertTrue(Data[0].img == "cat1");
+      XCTAssertTrue(Datacat[1].img == "https://cf.ltkcdn.net/cats/images/orig/247865-1600x1030-sphynx-cat-rescue-shelters.jpg");
+        XCTAssertTrue(Datacat[2].img == "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png");
+        XCTAssertTrue(Datacat[0].img == "https://cdn1-www.cattime.com/assets/uploads/gallery/bombay-cats-and-kittens_1/devon-rex-cats-and-kittens-1.jpg");
     }
     func testtextfield(){
-        XCTAssertTrue(Data[1].note == "");
-        XCTAssertTrue(Data[2].note == "");
-        XCTAssertTrue(Data[0].note == "");
+        XCTAssertTrue(Datacat[1].note == "");
+        XCTAssertTrue(Datacat[2].note == "");
+        XCTAssertTrue(Datacat[0].note == "");
     }
+    
+    func testurlimage(){
+        guard URL(string: Datacat[0].img) != nil else {
+                  fatalError("URL error")
+              }
+        XCTAssertTrue(Datacat[0].img != "")
+        
+    }
+
 
     
 }
