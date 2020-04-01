@@ -63,7 +63,7 @@ class viewModel: ObservableObject, Identifiable{
     
     
     func add(){
-        let cat = Cat(img:imageholder, name:"<new cat>", breed:"", color:" ", size:" ", note:"")
+        let cat = Cat(img:imageholder, name:"<new cat>", breed:"", color:"", size:"", note:"")
         cats.append(cat)
     }
     func removelist(_ indexSet: IndexSet) {

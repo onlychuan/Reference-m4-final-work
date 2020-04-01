@@ -19,7 +19,7 @@ struct ContentView: View {
             VStack(alignment: .leading){
                 Text("Note:")
                     .font(.headline)
-                TextField("",text:$cat.note)
+                TextField("Entre note",text:$cat.note)
                     .padding(.horizontal)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
@@ -28,14 +28,18 @@ struct ContentView: View {
             .frame(width:UIScreen.main.bounds.width,height: UIScreen.main.bounds.height/3)
             TextField("name",text:$cat.name)
                 .font(.largeTitle)}
+            
+            .textFieldStyle(RoundedBorderTextFieldStyle())
                 
             HStack {
                 Text("Breed:")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                TextField("",text:$cat.breed)
+                TextField("Entre breed",text:$cat.breed)
                  .font(.largeTitle)
+                
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                  
             }
             HStack {
@@ -43,16 +47,19 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.horizontal, 11.0)
-                TextField("",text:$cat.color)
+                TextField("Entre color",text:$cat.color)
                  .font(.largeTitle)
+                .padding(.horizontal)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             HStack {
                 Text("Size:")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.horizontal, 11.0)
-                TextField("",text:$cat.size)
+                TextField("Entre size",text:$cat.size)
                  .font(.largeTitle)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             
             if cat.img == "https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img.jpg" {
